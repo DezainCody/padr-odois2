@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 
  * Arquivo: index.css
- * Estilos para a loja Belle Rose
+ * Estilos para a loja Closet Dellas
  */
 
 /* Estilos gerais */
@@ -27,8 +27,8 @@ img {
 }
 
 body {
-    background-color: #fff9fc;
-    color: #4a4a4a;
+    background-color: #f5f5f5;
+    color: #333333;
     /* Removed the background-image that was creating the random circular elements */
 }
 
@@ -42,10 +42,10 @@ body {
     position: relative;
     width: 100%;
     padding: 20px 20px 15px; /* Reduzido o padding, especialmente na parte inferior */
-    background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
-    border-bottom: 3px solid #ffb6c1;
+    background: linear-gradient(135deg, #999999 0%, #777777 100%);
+    border-bottom: 3px solid #777777;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 4px 20px rgba(119, 119, 119, 0.3);
     overflow: hidden;
 }
 
@@ -128,7 +128,7 @@ body {
 
 .logo-placeholder:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 8px 25px rgba(119, 119, 119, 0.5);
 }
 
 .logo-placeholder img {
@@ -179,11 +179,11 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.15);
+    box-shadow: 0 5px 15px rgba(119, 119, 119, 0.15);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 3px solid #ffb6c1;
+    border-left: 3px solid #777777;
     position: relative;
     overflow: hidden;
 }
@@ -197,9 +197,9 @@ body {
     right: 0;
     height: 3px;
     background: linear-gradient(135deg, 
-        #ffb6c1 0%, 
-        #ffd1dc 50%, 
-        #ffb6c1 100%);
+        #777777 0%, 
+        #999999 50%, 
+        #777777 100%);
     background-size: 200% 200%;
     animation: shimmerDiagonal 4s ease-in-out infinite;
     opacity: 0.7;
@@ -209,7 +209,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
-    color: #ff9eb6;
+    color: #666666;
     font-family: 'Cormorant Garamond', serif;
     position: relative;
     display: inline-block;
@@ -223,13 +223,13 @@ body {
     bottom: -3px;
     width: 30px;
     height: 1px;
-    background-color: #ffb6c1;
+    background-color: #777777;
 }
 
 .hours {
     font-size: 14px;
     line-height: 1.6;
-    color: #555;
+    color: #444444;
     font-family: 'Jost', sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -237,7 +237,7 @@ body {
 
 .hours span {
     font-weight: 600;
-    color: #ffb6c1;
+    color: #666666;
 }
 
 .status-indicator {
@@ -302,7 +302,7 @@ body {
     background-color: transparent;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15);
+    box-shadow: 0 10px 25px rgba(119, 119, 119, 0.15);
     position: relative;
     overflow: hidden;
 }
@@ -314,7 +314,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 182, 193, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(119, 119, 119, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
     animation: rotate 25s infinite linear;
     opacity: 0.6;
 }
@@ -328,7 +328,7 @@ body {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 25px;
-    color: #ff9eb6;
+    color: #666666;
     position: relative;
     display: inline-block;
     font-family: 'Cormorant Garamond', serif;
@@ -343,7 +343,7 @@ body {
     bottom: -5px;
     width: 40px;
     height: 1px;
-    background-color: #ffb6c1;
+    background-color: #777777;
 }
 
 .social-list {
@@ -366,12 +366,12 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #555;
+    color: #444444;
     padding: 15px 20px;
     border-radius: 12px;
     transition: all 0.3s ease;
     background-color: rgba(255, 255, 255, 0.6);
-    border-left: 4px solid #ffb6c1;
+    border-left: 4px solid #777777;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     position: relative;
@@ -386,7 +386,7 @@ body {
     left: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, #ffb6c1, #ffd1dc);
+    background: linear-gradient(to bottom, #777777, #999999);
 }
 
 .social-link::after {
@@ -396,41 +396,41 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2) 0%, rgba(255, 255, 255, 0) 60%);
+    background: linear-gradient(135deg, rgba(119, 119, 119, 0.2) 0%, rgba(255, 255, 255, 0) 60%);
     z-index: -1;
 }
 
 .social-link:hover {
-    background: linear-gradient(135deg, #ffb6c1 0%, #ffd1dc 100%);
+    background: linear-gradient(135deg, #777777 0%, #999999 100%);
     color: #fff;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
-    border-left: 4px solid #ff9eb6;
+    box-shadow: 0 10px 20px rgba(119, 119, 119, 0.3);
+    border-left: 4px solid #666666;
 }
 
 /* Estilo específico para o div de localização (não é mais um link) */
 .location-div {
     cursor: pointer;
     position: relative;
-    background: linear-gradient(to right, rgba(255, 182, 193, 0.1), rgba(255, 255, 255, 0.8));
-    border-left: 4px solid #4285F4;
-    border-right: 1px solid #4285F4;
-    border-top: 1px solid #4285F4;
-    border-bottom: 1px solid #4285F4;
+    background: linear-gradient(to right, rgba(119, 119, 119, 0.1), rgba(255, 255, 255, 0.8));
+    border-left: 4px solid #555555;
+    border-right: 1px solid #555555;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
 }
 
 .location-div:hover {
-    background: linear-gradient(to right, rgba(66, 133, 244, 0.1), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(to right, rgba(85, 85, 85, 0.1), rgba(255, 255, 255, 0.9));
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(66, 133, 244, 0.3);
+    box-shadow: 0 10px 20px rgba(85, 85, 85, 0.3);
 }
 
 .location-div:active {
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(66, 133, 244, 0.4);
+    box-shadow: 0 5px 10px rgba(85, 85, 85, 0.4);
 }
 
 /* Container para organizar o conteúdo de localização */
@@ -455,15 +455,15 @@ body {
 }
 
 .location-div:hover .copyable-location {
-    background-color: rgba(66, 133, 244, 0.1);
-    color: #4285F4;
+    background-color: rgba(85, 85, 85, 0.1);
+    color: #444444;
     font-weight: 400;
 }
 
 /* Ícone de cópia */
 .location-copy-icon {
-    background-color: rgba(66, 133, 244, 0.1);
-    color: #4285F4;
+    background-color: rgba(85, 85, 85, 0.1);
+    color: #555555;
     min-width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -477,11 +477,11 @@ body {
 }
 
 .location-div:hover .location-copy-icon {
-    background-color: #4285F4;
+    background-color: #555555;
     color: white;
     opacity: 1;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+    box-shadow: 0 0 10px rgba(85, 85, 85, 0.5);
 }
 
 /* Efeito de pulsação para chamar atenção */
@@ -502,7 +502,7 @@ body {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4285F4;
+    background-color: #555555;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
@@ -574,12 +574,12 @@ body {
 }
 
 .social-icon.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: #555555;
     color: white;
 }
 
 .social-icon.whatsapp {
-    background-color: #25D366;
+    background-color: #555555;
     color: white;
     border-radius: 50%;
     flex-shrink: 0;
@@ -592,12 +592,12 @@ body {
 }
 
 .social-icon.tiktok {
-    background-color: #000;
+    background-color: #555555;
     color: white;
 }
 
 .social-icon.location {
-    background-color: #4285F4;
+    background-color: #555555;
     color: white;
 }
 
@@ -617,7 +617,7 @@ body {
 .footer {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #ffb6c1 0%, #ffd1dc 100%);
+    background: linear-gradient(135deg, #777777 0%, #999999 100%);
     color: #fff;
     position: relative;
     overflow: hidden;
