@@ -133,13 +133,14 @@ function addShimmerEffects() {
 function setupLocationCopy() {
     const locationDiv = document.querySelector('.location-div');
     const locationText = document.querySelector('.copyable-location');
+    const copyIcon = document.querySelector('.location-copy-icon');
     
     if (locationDiv && locationText) {
         // Adicionar classe de animação pulsante para chamar atenção
         locationDiv.classList.add('location-pulse');
         
-        // Adicionar feedback visual ao clicar no texto
-        locationDiv.addEventListener('click', () => {
+        // Adicionar feedback visual ao clicar no texto ou no ícone
+        const handleCopyClick = () => {
             // Tenta copiar o texto para a área de transferência usando a API Clipboard moderna
             const textToCopy = locationText.textContent;
             
@@ -175,7 +176,21 @@ function setupLocationCopy() {
                     alert('Não foi possível copiar automaticamente. Por favor, selecione o texto manualmente e copie (Ctrl+C / Cmd+C).');
                 }
             }
-        });
+        };
+        
+        // Adicionar evento de clique tanto no div quanto no ícone
+        locationDiv.addEventListener('click', handleCopyClick);
+        if (copyIcon) {
+            copyIcon.addEventListener('click', (e) => {
+                e.stopPropagation(); // Previne o disparo duplo do evento
+                handleCopyClick();
+            });
+        }
+        
+        // Remover a pulsação após 5 segundos (para não ser muito intrusivo)
+        setTimeout(() => {
+            locationDiv.classList.remove('location-pulse');
+        }, 5000);
     }
 }
 

@@ -418,6 +418,8 @@ body {
     border-top: 1px solid #4285F4;
     border-bottom: 1px solid #4285F4;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .location-div:hover {
@@ -431,6 +433,14 @@ body {
     box-shadow: 0 5px 10px rgba(66, 133, 244, 0.4);
 }
 
+/* Container para organizar o conteúdo de localização */
+.location-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
 /* Adiciona um estilo para o texto copiável */
 .copyable-location {
     user-select: all; /* Permite selecionar todo o texto com um clique duplo */
@@ -438,7 +448,10 @@ body {
     padding: 2px 5px;
     border-radius: 4px;
     transition: all 0.3s ease;
-    flex-grow: 1; /* Para permitir que o ícone de cópia fique à direita */
+    margin-right: 10px;
+    flex: 1;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .location-div:hover .copyable-location {
@@ -449,10 +462,9 @@ body {
 
 /* Ícone de cópia */
 .location-copy-icon {
-    margin-left: 10px;
     background-color: rgba(66, 133, 244, 0.1);
     color: #4285F4;
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     border-radius: 50%;
     display: flex;
@@ -460,6 +472,8 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     opacity: 0.7;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .location-div:hover .location-copy-icon {
@@ -504,6 +518,37 @@ body {
 
 .location-div:hover::after {
     opacity: 1;
+}
+
+/* Responsividade específica para o elemento de localização */
+@media (max-width: 768px) {
+    .location-content {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .copyable-location {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .copyable-location {
+        font-size: 13px;
+        padding-right: 5px;
+    }
+    
+    .location-copy-icon {
+        min-width: 24px;
+        height: 24px;
+        margin-left: 5px;
+    }
 }
 
 /* Social icons - ensuring all are perfectly round */
