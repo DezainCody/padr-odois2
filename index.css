@@ -1,176 +1,190 @@
 @charset "UTF-8";
 /* 
  * Arquivo: index.css
- * Estilos para a loja CLOSET DELLAS - Versão Clean em Tons de Bege Mais Escuro
+ * Novo Layout para CLOSET DELLAS - Design Minimalista e Elegante
  */
 
-/* Estilos gerais */
+/* Reset e configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jost', sans-serif;
 }
 
-/* Viewport config for better responsive behavior */
 html {
+    scroll-behavior: smooth;
     font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
-/* Base para tratamento de imagens */
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: #f5f2ed;
+    color: #5d534c;
+    line-height: 1.5;
+}
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-body {
-    background-color: #e8e1d1; /* Bege médio para o fundo */
-    color: #4d4438; /* Marrom escuro para contraste */
-    line-height: 1.6;
-}
-
-/* Header com design clean em tons de bege mais escuros */
+/* NOVO LAYOUT - HEADER MODERNO */
 .header {
-    position: relative;
-    width: 100%;
-    padding: 25px 20px 20px;
-    background: linear-gradient(135deg, #d8cfb9 0%, #c9bda7 100%); /* Gradiente em bege médio-escuro */
-    border-bottom: 1px solid #b9ad97;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.logo-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    min-height: 280px;
+    padding: 30px 20px;
+    background-color: #ede8e0;
+    position: relative;
+}
+
+/* Barra minimalista no topo */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #d0c3af, #e8e1d6, #d0c3af);
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .logo-placeholder {
     width: 110px;
     height: 110px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    margin: 0 auto 15px;
     position: relative;
-    border: 2px solid #a5937a; /* Bege escuro */
-}
-
-.logo-placeholder:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(125, 106, 83, 0.2);
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(186, 173, 157, 0.2);
+    transition: transform 0.3s;
 }
 
 .logo-placeholder img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: all 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
 }
 
-.logo-placeholder img:hover {
-    transform: scale(1.08);
+.logo-placeholder:hover img {
+    transform: scale(1.05);
 }
 
+/* Redesenho do nome da loja */
 .store-name {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 6px;
-    color: #4d4438; /* Marrom escuro */
-    text-transform: uppercase;
-    letter-spacing: 5px;
     font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    color: #5d534c;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa sob o título */
+.store-name::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: #baad9d;
 }
 
 .welcome-message {
-    font-size: 16px;
+    font-size: 15px;
+    letter-spacing: 3px;
     font-weight: 300;
-    color: #5d5143; /* Marrom médio */
-    margin-bottom: 0;
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1px;
+    color: #8a7b6c;
+    margin-top: 15px;
 }
 
-/* Container principal - com largura fluida */
+/* CONTAINER PRINCIPAL - Nova estrutura */
 .container {
-    width: 100%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
-/* Status de funcionamento - Redesenhado com estilo clean em tons de bege mais escuros */
+/* REDESENHO - Card de status da loja */
 .store-status {
-    background-color: #f0e9d9; /* Bege claro para o card */
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 35px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 3px solid #a5937a; /* Bege escuro */
-    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
-.hours-title {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #5d5143; /* Marrom médio */
-    font-family: 'Cormorant Garamond', serif;
-    position: relative;
-    display: inline-block;
-    letter-spacing: 1px;
-}
-
-.hours-title::after {
+/* Borda estilizada no lado esquerdo */
+.store-status::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px;
-    width: 30px;
-    height: 1px;
-    background-color: #a5937a; /* Bege escuro */
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #d0c3af;
+}
+
+.hours-container {
+    flex: 1;
+}
+
+.hours-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #8a7b6c;
+    margin-bottom: 16px;
+    position: relative;
 }
 
 .hours {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4d4438; /* Marrom escuro */
-    font-family: 'Jost', sans-serif;
+    color: #5d534c;
+    font-size: 15px;
     font-weight: 300;
-    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+.hours p {
+    margin: 6px 0;
 }
 
 .hours span {
     font-weight: 500;
-    color: #5d5143; /* Marrom médio */
+    color: #8a7b6c;
+    display: inline-block;
+    width: 120px;
 }
 
+/* Novo design de status */
 .status-indicator {
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-weight: 400;
     letter-spacing: 0.5px;
-    font-family: 'Jost', sans-serif;
-    background-color: transparent;
 }
 
 .status-dot {
@@ -178,137 +192,207 @@ body {
     height: 8px;
     border-radius: 50%;
     margin-right: 10px;
-    animation: pulse 4s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
-    70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(46, 204, 113, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
-}
-
-@keyframes pulseClosed {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
-    70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(231, 76, 60, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
 }
 
 .status-open {
-    background-color: #f8fff8;
-    color: #2ecc71;
-    border: 1px solid rgba(46, 204, 113, 0.3);
+    background-color: #f4f9f4;
+    color: #4e8d53;
+    border: 1px solid #d7e8d8;
 }
 
 .status-open .status-dot {
-    background-color: #2ecc71;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    background-color: #4e8d53;
+    box-shadow: 0 0 0 rgba(78, 141, 83, 0.4);
+    animation: pulse 2s infinite;
 }
 
 .status-closed {
-    background-color: #fff8f8;
-    color: #e74c3c;
-    border: 1px solid rgba(231, 76, 60, 0.3);
+    background-color: #f9f4f4;
+    color: #c05d53;
+    border: 1px solid #e8d7d7;
 }
 
 .status-closed .status-dot {
-    background-color: #e74c3c;
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
-    animation: pulseClosed 4s infinite;
+    background-color: #c05d53;
+    box-shadow: 0 0 0 rgba(192, 93, 83, 0.4);
+    animation: pulseClosed 2s infinite;
 }
 
-/* Redes sociais - Redesenhado com estilo clean em tons de bege mais escuros */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(78, 141, 83, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(78, 141, 83, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(78, 141, 83, 0);
+    }
+}
+
+@keyframes pulseClosed {
+    0% {
+        box-shadow: 0 0 0 0 rgba(192, 93, 83, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(192, 93, 83, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(192, 93, 83, 0);
+    }
+}
+
+/* REDESENHO COMPLETO - Seção de contatos e redes sociais */
 .social-links {
-    background-color: #f0e9d9; /* Bege claro para o card */
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .social-title {
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 25px;
-    color: #5d5143; /* Marrom médio */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #8a7b6c;
+    margin-bottom: 10px;
     position: relative;
     display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 1px;
 }
 
 .social-title::after {
     content: "";
     position: absolute;
+    bottom: -8px;
     left: 0;
-    bottom: -5px;
     width: 40px;
     height: 1px;
-    background-color: #a5937a; /* Bege escuro */
+    background-color: #d0c3af;
 }
 
+/* NOVO GRID de elementos sociais */
 .social-list {
     list-style: none;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .social-item {
-    margin-bottom: 20px;
-    transform: translateX(0);
     transition: transform 0.3s ease;
 }
 
-.social-item:last-child {
-    margin-bottom: 0;
-}
-
+/* Cards de contato redesenhados */
 .social-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #4d4438; /* Marrom escuro */
-    padding: 15px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background-color: #e8e1d1; /* Bege médio */
-    border-left: 3px solid #b9ad97; /* Bege médio-escuro */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    color: #5d534c;
+    border-radius: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
     position: relative;
-    word-break: break-word;
-    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Borda estilizada no topo */
+.social-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #d0c3af;
+    transition: height 0.3s;
 }
 
 .social-link:hover {
-    background-color: #d8cfb9; /* Bege médio-escuro */
-    color: #3d372e; /* Marrom muito escuro */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(125, 106, 83, 0.15);
-    border-left: 3px solid #8c7c63; /* Bege mais escuro */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-/* Estilo específico para o div de localização */
-.location-div {
-    cursor: pointer;
-    position: relative;
-    background-color: #e8e1d1; /* Bege médio */
-    border-left: 3px solid #8c7c63; /* Bege mais escuro */
-    transition: all 0.3s ease;
+.social-link:hover::before {
+    height: 5px;
+}
+
+.social-icon {
+    min-width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.4s;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Cores específicas para cada plataforma */
+.social-icon.instagram {
+    background: linear-gradient(45deg, #d0c3af, #c4b59f);
+}
+
+.social-icon.whatsapp {
+    background-color: #d0c3af;
+}
+
+.social-icon.tiktok {
+    background-color: #d0c3af;
+}
+
+.social-icon.location {
+    background-color: #8a7b6c;
+}
+
+.social-text {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s;
+}
+
+.social-link:hover .social-text {
+    transform: translateX(5px);
+}
+
+/* Redesenho completo do elemento de localização */
+.location-div {
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+}
+
+.location-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #8a7b6c;
+    transition: height 0.3s;
 }
 
 .location-div:hover {
-    background-color: #d8cfb9; /* Bege médio-escuro */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(125, 106, 83, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-.location-div:active {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(125, 106, 83, 0.2);
+.location-div:hover::before {
+    height: 5px;
 }
 
-/* Container para organizar o conteúdo de localização */
 .location-content {
     display: flex;
     align-items: center;
@@ -316,155 +400,118 @@ body {
     flex: 1;
 }
 
-/* Adiciona um estilo para o texto copiável */
 .copyable-location {
     user-select: all;
-    position: relative;
     padding: 2px 5px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
     margin-right: 10px;
     flex: 1;
-    white-space: normal;
-    word-break: break-word;
+    font-weight: 300;
+    transition: all 0.3s;
 }
 
 .location-div:hover .copyable-location {
-    background-color: rgba(125, 106, 83, 0.1);
-    color: #5d5143; /* Marrom médio */
-    font-weight: 400;
+    color: #8a7b6c;
+    background-color: rgba(138, 123, 108, 0.08);
+    border-radius: 3px;
 }
 
-/* Ícone de cópia */
+/* Ícone de copiar localização */
 .location-copy-icon {
-    background-color: rgba(125, 106, 83, 0.15);
-    color: #8c7c63; /* Bege mais escuro */
-    min-width: 30px;
-    height: 30px;
+    min-width: 32px;
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-    margin-left: auto;
-    flex-shrink: 0;
+    background-color: rgba(138, 123, 108, 0.1);
+    color: #8a7b6c;
+    margin-left: 10px;
+    transition: all 0.3s;
 }
 
 .location-div:hover .location-copy-icon {
-    background-color: #8c7c63; /* Bege mais escuro */
-    color: white;
-    opacity: 1;
+    background-color: #8a7b6c;
+    color: #fff;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(125, 106, 83, 0.3);
 }
 
-/* Adiciona um tooltip para indicar que o texto pode ser copiado */
+/* Tooltip de cópia */
 .location-div::after {
     content: "Clique para copiar";
     position: absolute;
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #8c7c63; /* Bege mais escuro */
+    background-color: #8a7b6c;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5px;
-    pointer-events: none;
     opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
     z-index: 10;
-    transition: opacity 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .location-div:hover::after {
     opacity: 1;
 }
 
-/* Social icons - design clean e moderno */
-.social-icon {
-    width: 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 20px;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    background-color: #d8cfb9; /* Bege médio-escuro */
-    color: #8c7c63; /* Bege mais escuro */
-    flex-shrink: 0;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.social-link:hover .social-icon {
-    transform: rotate(360deg) scale(1.05);
-}
-
-.social-icon.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-}
-
-.social-icon.whatsapp {
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    flex-shrink: 0;
-    min-width: 46px;
-    min-height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.social-icon.tiktok {
-    background-color: #000;
-    color: white;
-}
-
-.social-icon.location {
-    background-color: #8c7c63; /* Bege mais escuro */
-    color: white;
-}
-
-.social-text {
-    font-weight: 300;
-    font-family: 'Jost', sans-serif;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-}
-
-.location-div:hover .social-text {
-    transform: translateX(3px);
-}
-
-/* Footer com design minimalista em tons de bege mais escuro */
+/* Footer redesenhado */
 .footer {
+    background-color: #ede8e0;
+    padding: 30px 20px;
     text-align: center;
-    padding: 25px;
-    background-color: #c9bda7; /* Bege escuro para o rodapé */
-    color: #4d4438; /* Marrom escuro */
     position: relative;
-    border-top: 1px solid #b9ad97;
+}
+
+/* Barra decorativa no rodapé */
+.footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #d0c3af, #e8e1d6, #d0c3af);
 }
 
 .footer p {
+    color: #8a7b6c;
     font-size: 14px;
-    font-family: 'Jost', sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* RESPONSIVIDADE OTIMIZADA */
+@media (min-width: 768px) {
+    .container {
+        padding: 60px 30px;
+    }
+    
+    .store-status {
+        padding: 40px;
+    }
+    
+    .social-link, 
+    .location-div {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        min-height: 220px;
+        padding: 20px;
+    }
+    
+    .store-name {
+        font-size: 28px;
+        letter-spacing: 6px;
+    }
+    
     .store-status {
         flex-direction: column;
         text-align: center;
@@ -472,22 +519,33 @@ body {
     
     .status-indicator {
         margin-top: 20px;
-        justify-content: center;
     }
     
-    .hours-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
+    .hours-title::after,
     .social-title::after {
         left: 50%;
         transform: translateX(-50%);
     }
     
-    .social-title, .hours-title {
+    .hours span {
+        width: auto;
+        margin-right: 5px;
+    }
+    
+    .social-title {
         display: block;
         text-align: center;
+        margin: 0 auto 20px;
+    }
+    
+    .social-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        min-height: 180px;
     }
     
     .logo-placeholder {
@@ -496,134 +554,28 @@ body {
     }
     
     .store-name {
-        font-size: 26px;
-        letter-spacing: 3px;
+        font-size: 22px;
+        letter-spacing: 4px;
     }
     
     .welcome-message {
-        font-size: 14px;
-    }
-    
-    .container {
-        padding: 20px 15px;
-    }
-    
-    .social-link, .location-div {
-        padding: 12px 15px;
-    }
-    
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        margin-right: 15px;
-    }
-    
-    .social-icon.whatsapp {
-        min-width: 40px;
-        min-height: 40px;
-    }
-    
-    .social-text {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .store-name {
-        font-size: 22px;
+        font-size: 13px;
         letter-spacing: 2px;
     }
     
-    .welcome-message {
-        font-size: 13px;
-    }
-    
-    .logo-placeholder {
-        width: 75px;
-        height: 75px;
-    }
-    
-    .hours {
-        font-size: 13px;
-    }
-    
-    .hours-title, .social-title {
-        font-size: 18px;
-    }
-    
-    .social-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-        margin-right: 12px;
-    }
-    
-    .social-icon.whatsapp {
-        min-width: 36px;
-        min-height: 36px;
-    }
-    
-    .social-text {
-        font-size: 13px;
-    }
-    
-    .social-link, .location-div {
-        padding: 10px 12px;
-    }
-    
-    .store-status, .social-links {
-        padding: 15px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1100px;
-        padding: 50px 30px;
-    }
-    
-    .logo-placeholder {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .store-name {
-        font-size: 36px;
-    }
-    
-    .welcome-message {
-        font-size: 18px;
-    }
-    
-    .hours-title {
-        font-size: 22px;
-    }
-    
-    .hours {
-        font-size: 15px;
-    }
-    
+    .hours-title, 
     .social-title {
-        font-size: 24px;
+        font-size: 20px;
     }
     
+    .hours, 
     .social-text {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .social-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-    }
-    
-    .social-icon.whatsapp {
-        min-width: 50px;
-        min-height: 50px;
-    }
-    
-    .social-link, .location-div {
-        padding: 18px 22px;
+        min-width: 40px;
+        height: 40px;
+        margin-right: 15px;
     }
 }
