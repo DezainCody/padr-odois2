@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 
  * Arquivo: index.css
- * Novo Layout para CLOSET DELLAS - Design Minimalista e Elegante
+ * Novo Layout para ICARUS - Design Minimalista Elegante em Cinza e Preto
  */
 
 /* Reset e configurações gerais */
@@ -18,8 +18,8 @@ html {
 
 body {
     font-family: 'Jost', sans-serif;
-    background-color: #f5f2ed;
-    color: #5d534c;
+    background-color: #f5f5f5;
+    color: #333333;
     line-height: 1.5;
 }
 
@@ -29,14 +29,14 @@ img {
     display: block;
 }
 
-/* NOVO LAYOUT - HEADER MODERNO */
+/* HEADER MODERNO */
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 280px;
     padding: 30px 20px;
-    background-color: #ede8e0;
+    background-color: #e6e6e6;
     position: relative;
 }
 
@@ -48,7 +48,7 @@ img {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #d0c3af, #e8e1d6, #d0c3af);
+    background: linear-gradient(to right, #000000, #333333, #000000);
 }
 
 .logo-container {
@@ -64,7 +64,7 @@ img {
     overflow: hidden;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: 0 6px 20px rgba(186, 173, 157, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -85,7 +85,7 @@ img {
     font-size: 34px;
     font-weight: 400;
     letter-spacing: 8px;
-    color: #5d534c;
+    color: #000000;
     text-transform: uppercase;
     margin-bottom: 8px;
     position: relative;
@@ -101,14 +101,14 @@ img {
     transform: translateX(-50%);
     width: 60px;
     height: 1px;
-    background-color: #baad9d;
+    background-color: #333333;
 }
 
 .welcome-message {
     font-size: 15px;
     letter-spacing: 3px;
     font-weight: 300;
-    color: #8a7b6c;
+    color: #4d4d4d;
     margin-top: 15px;
 }
 
@@ -142,7 +142,7 @@ img {
     top: 0;
     height: 100%;
     width: 3px;
-    background-color: #d0c3af;
+    background-color: #000000;
 }
 
 .hours-container {
@@ -154,13 +154,13 @@ img {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 500;
-    color: #8a7b6c;
+    color: #333333;
     margin-bottom: 12px;
     position: relative;
 }
 
 .hours {
-    color: #5d534c;
+    color: #4d4d4d;
     font-size: 15px;
     font-weight: 300;
     line-height: 1.5;
@@ -175,7 +175,7 @@ img {
 
 .hours span {
     font-weight: 500;
-    color: #8a7b6c;
+    color: #333333;
     min-width: 70px;
     margin-right: 8px;
 }
@@ -258,7 +258,7 @@ img {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-weight: 500;
-    color: #8a7b6c;
+    color: #333333;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
@@ -271,7 +271,7 @@ img {
     left: 0;
     width: 40px;
     height: 1px;
-    background-color: #d0c3af;
+    background-color: #000000;
 }
 
 /* NOVO GRID de elementos sociais */
@@ -293,7 +293,7 @@ img {
     text-decoration: none;
     background-color: #fff;
     padding: 20px;
-    color: #5d534c;
+    color: #333333;
     border-radius: 0;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     transition: all 0.3s;
@@ -310,7 +310,7 @@ img {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #d0c3af;
+    background-color: #000000;
     transition: height 0.3s, background-color 0.3s;
 }
 
@@ -340,7 +340,7 @@ img {
     transform: scale(1.1);
 }
 
-/* Cores reais para cada plataforma */
+/* Cores originais das plataformas */
 .social-icon.instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
@@ -385,7 +385,7 @@ img {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #d0c3af;
+    background-color: #000000;
     transition: height 0.3s, background-color 0.3s;
 }
 
@@ -466,7 +466,7 @@ img {
 
 /* Footer redesenhado */
 .footer {
-    background-color: #ede8e0;
+    background-color: #e6e6e6;
     padding: 30px 20px;
     text-align: center;
     position: relative;
@@ -480,11 +480,11 @@ img {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #d0c3af, #e8e1d6, #d0c3af);
+    background: linear-gradient(to right, #000000, #333333, #000000);
 }
 
 .footer p {
-    color: #8a7b6c;
+    color: #333333;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.5px;
